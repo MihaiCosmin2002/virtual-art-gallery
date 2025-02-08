@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+    background-color: #000;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#instructions {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    z-index: 1; /* Make sure instructions are on top */
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Higher z-index than instructions */
+}
+#overlay div {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ #upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Styles for artwork info panel */
+#artwork-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 3;
+    display: none; /* Initially hidden */
+    text-align: left; /* Left-align text within the panel */
+    max-width: 80%; /* Limit width */
+    max-height: 80%; /* Limit height */
+    overflow: auto;  /* Add scrollbars if content overflows */
+}
+
+#artwork-info h2 {
+    margin-top: 0; /* Remove top margin from the heading */
+    font-size: 1.5em;
+}
+
+#close-info {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; /* Add some space above the button */
+    cursor: pointer;
+    border-radius: 5px;
+}

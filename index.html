@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+</head>
+<body>
+    <div id="instructions">
+        <p>WASD: Move, Mouse: Look, M: Toggle Music, Click Artwork: View Details</p>
+    </div>
+    <div id="overlay">
+        <div>
+            <p>Click to Play</p>
+            <input type="file" id="file-upload" accept="image/*" multiple style="display: none;">
+            <label for="file-upload" id="upload-button">Upload Artworks</label>
+        </div>
+    </div>
+    <div id="artwork-info">
+        <h2 id="artwork-title"></h2>
+        <p id="artwork-artist"></p>
+        <p id="artwork-description"></p>
+        <button id="close-info">Close</button>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
